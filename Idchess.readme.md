@@ -18,6 +18,9 @@
 - запуск сервиса используя измененый hcl файл(конфигурация job)
 
 
+Ручной запуск сборки и деплоя:
+
+Любой существующий workflow run возможно перезапустить, войдя внутрь выбранного workflow и нажав кнопку **Re-Run all jobs** в правом верхнем углу
 
 ToDo:
 - изменить использование частного гитхаб аккаунта для хранения докер образов (необходимы права владельца репы) [документация](https://docs.github.com/en/packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions#upgrading-a-workflow-that-accesses-ghcrio)
