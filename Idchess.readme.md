@@ -13,12 +13,13 @@
 - Образ пушится в реестр гитхаба (пока частный) ghcr.io/ivanvsobolev (см.todo)
 
 2. Деплой сервиса
-- Деплой основан на docker-compose. Используется [docker-compose-idchess-front.yml](https://github.com/smmarty/idchess_front/blob/main/docker-compose-idchess-front.yml) 
+- Деплой основан на запуске job nomad'а. Конфигурации job nomad'а хранятся в отдельном [репозитории](https://github.com/smmarty/idchess_devops)
 - перед деплоем подставляется номер версии образа, совпадающий с номером сборки(action) в github
-- запуск сервиса используя измененый docker-compose файл
+- запуск сервиса используя измененый hcl файл(конфигурация job)
 
 
 
 ToDo:
 - изменить использование частного гитхаб аккаунта для хранения докер образов (необходимы права владельца репы) [документация](https://docs.github.com/en/packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions#upgrading-a-workflow-that-accesses-ghcrio)
+- вынести переменные из actions в секреты github
 - добавить деплой в продакшен по доп. заданию
